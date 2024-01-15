@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none;
+  }
+}
+
+@layer components {
+  .button-filter {
+    @apply focus:outline-none focus:ring-1 focus:ring-greenPrimaryShade-light focus:ring-opacity-50 rounded-md bg-greenPrimary hover:bg-greenPrimaryShade-light hover:cursor-pointer h-10 w-44 outline-none ring-0 px-3;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header,
+footer {
+  font-family: "Bungee Spice", cursive;
+}
+
+#outer-form-container {
+  background-image: url("assets/images/beach.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position-x: 50%;
+  background-position-y: 85%;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+}
